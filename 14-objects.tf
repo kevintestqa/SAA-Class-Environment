@@ -1,5 +1,5 @@
 resource "aws_s3_object" "index" {
-    bucket = aws_s3_bucket.terraform-sunday.id
+    bucket = aws_s3_bucket.static_site.id
     key = "index.html"
     source = "/Users/kevinwillocks/TheoWAF/class7/AWS/Terraform/2025Dec7/index.html"
     content_type = "text/html"
@@ -7,7 +7,7 @@ resource "aws_s3_object" "index" {
 }
 
 resource "aws_s3_object" "error" {
-    bucket = aws_s3_bucket.terraform-sunday.id
+    bucket = aws_s3_bucket.static_site.id
     key = "error.html"
     source = "/Users/kevinwillocks/TheoWAF/class7/AWS/Terraform/2025Dec7/error.html"
     content_type = "text/html"
@@ -15,7 +15,7 @@ resource "aws_s3_object" "error" {
 }
 
 resource "aws_s3_object" "panama" {
-    bucket = aws_s3_bucket.terraform-sunday.id
+    bucket = aws_s3_bucket.static_site.id
     key = "Panama-City-Panama-Trip-02.jpg"
     source = "${path.root}/Panama-City-Panama-Trip-02.jpg"
     content_type = "image/jpeg"
@@ -23,7 +23,7 @@ resource "aws_s3_object" "panama" {
 }
 
 resource "aws_s3_object" "image" {
-    bucket = aws_s3_bucket.terraform-sunday.id
+    bucket = aws_s3_bucket.static_site.id
     key = "image.jpg"
     source = "${path.root}/image.jpg"
     content_type = "image/jpeg"
